@@ -1,0 +1,511 @@
+===========================================================================
+===========================================================================
+     SLIDE 3  EXERCICES ESSENTIELS : BOUCLES & CONDITIONS
+===========================================================================
+===========================================================================
+
+Titre :
+Exercices essentiels — Boucles & Conditions
+
+Sous-titre discret :
+Résoudre les exercices avant de regarder les corrections.
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 1 — FACTORIEL
+
+Énoncé :
+
+Écrire un algorithme qui permet de calculer le factoriel d’un entier positif N.
+
+Le factoriel d’un entier N est défini par :
+
+N! = 1 × 2 × 3 × ... × N
+
+L’algorithme doit :
+
+* lire un entier positif N
+* calculer le factoriel de N
+* afficher le résultat final
+
+Exemples :
+
+Exemple 1 :
+N = 5
+Résultat : 120
+
+Exemple 2 :
+N = 4
+Résultat : 24
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 2 — PUISSANCE
+
+Énoncé :
+
+Écrire un algorithme qui permet de calculer la puissance d’un entier.
+
+L’algorithme doit :
+
+* lire deux entiers a et n
+* calculer a^n
+* afficher le résultat final
+
+Exemples :
+
+Exemple 1 :
+a = 2
+n = 5
+Résultat : 32
+
+Exemple 2 :
+a = 3
+n = 4
+Résultat : 81
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 3 — NOMBRE PARFAIT
+
+Énoncé :
+
+Écrire un algorithme qui permet de vérifier si un entier positif N est un nombre parfait.
+
+Un nombre parfait est un nombre égal à la somme de ses diviseurs propres.
+
+Un diviseur propre est un diviseur différent du nombre lui-même.
+
+L’algorithme doit :
+
+* lire un entier positif N
+* calculer la somme des diviseurs propres de N
+* vérifier si cette somme est égale à N
+* afficher le résultat
+
+Exemples :
+
+Exemple 1 :
+N = 6
+
+Diviseurs propres :
+1, 2, 3
+
+Somme :
+1 + 2 + 3 = 6
+
+Résultat :
+6 est un nombre parfait
+
+Exemple 2 :
+N = 8
+
+Diviseurs propres :
+1, 2, 4
+
+Somme :
+1 + 2 + 4 = 7
+
+Résultat :
+8 n’est pas un nombre parfait
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 4 — INVERSION D’UN ENTIER
+
+Énoncé :
+
+Écrire un algorithme qui permet d’inverser les chiffres d’un entier positif.
+
+L’algorithme doit :
+
+* lire un entier positif N
+* inverser l’ordre de ses chiffres
+* afficher le nouvel entier obtenu
+
+Exemples :
+
+Exemple 1 :
+N = 1234
+Résultat : 4321
+
+Exemple 2 :
+N = 5608
+Résultat : 8065
+
+
+===========================================================================
+===========================================================================
+               SLIDE 4 — MÉTHODE & CORRECTIONS
+===========================================================================
+===========================================================================
+
+Titre :
+Comment résoudre ces exercices ?
+
+Sous-titre discret :
+Comprendre la logique avant d’écrire le pseudo-code.
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 1 — FACTORIEL
+
+Méthode de réflexion :
+
+Le factoriel est une multiplication répétée.
+
+Exemple :
+5! = 1 × 2 × 3 × 4 × 5
+
+On remarque que :
+
+* le résultat doit commencer à 1
+* chaque nouvelle valeur est multipliée au résultat précédent
+* une boucle FOR est adaptée
+
+Important :
+
+* 0! = 1
+* Alors on initialise la valeur a retourné à 1.
+
+Pseudo-code :
+
+Algorithm Factoriel;
+
+Var
+entier : N, i, fact ;
+
+Begin
+
+```
+Lire(N) ;
+
+fact <- 1 ;
+
+For i <- 1 to N do
+
+    fact <- fact * i ;
+
+EndFor ;
+
+Afficher(fact) ;
+```
+
+End.
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 2 — PUISSANCE
+
+Méthode de réflexion :
+
+Une puissance correspond à une multiplication répétée.
+
+Exemple :
+2^5 = 2 × 2 × 2 × 2 × 2
+
+On remarque que :
+
+* il faut conserver le résultat précédent
+* le résultat doit commencer à 1
+* on multiplie plusieurs fois par a
+
+Attention :
+
+* ne pas modifier directement a pour évité de le perdre
+* il faut stocker le résultat dans une autre variable
+
+Pseudo-code :
+
+Algorithm Puissance;
+
+Var
+entier : a, n, i, res ;
+
+Begin
+
+```
+Lire(a) ;
+Lire(n) ;
+
+res <- 1 ;
+
+For i <- 1 to n do
+
+    res <- res * a ;
+
+EndFor ;
+
+Afficher(res) ;
+```
+
+End.
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 3 — NOMBRE PARFAIT
+
+Méthode de réflexion :
+
+Il faut :
+
+* parcourir tous les diviseurs possibles
+* vérifier si le nombre est divisible
+* additionner les diviseurs trouvés
+
+On remarque que :
+
+* un diviseur vérifie :
+  N MOD i = 0
+* on utilise une boucle FOR
+* on utilise une somme accumulative
+
+Important :
+
+* N n'est pas un diviseur propre de lui-même !
+* les diviseurs propres vont de 1 à N-1
+
+Pseudo-code :
+
+Algorithm NombreParfait;
+
+Var
+entier : N, i, somme ;
+
+Begin
+
+```
+Lire(N) ;
+
+somme <- 0 ;
+
+For i <- 1 to N-1 do
+
+    If N MOD i = 0 Then
+
+        somme <- somme + i ;
+
+    Endif ;
+
+EndFor ;
+
+If somme = N Then
+
+    Afficher("Nombre parfait") ;
+
+Else
+
+    Afficher("Nombre non parfait") ;
+
+Endif ;
+```
+
+End.
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 4 — INVERSION D’UN ENTIER
+
+Méthode de réflexion :
+
+On récupère les chiffres un par un grâce au modulo.
+
+Exemple :
+1234
+
+* dernier chiffre : 4
+* puis 3
+* puis 2
+* puis 1
+
+On remarque que :
+
+* MOD permet de récupérer le dernier chiffre
+* DIV permet de supprimer le dernier chiffre
+* une boucle WHILE est adaptée
+
+Construction :
+
+* on ajoute progressivement les chiffres inversés
+
+Pseudo-code :
+
+Algorithm InversionEntier;
+
+Var
+entier : N, inv, chiffre ;
+
+Begin
+
+```
+Lire(N) ;
+
+inv <- 0 ;
+
+While N <> 0 do
+
+    chiffre <- N MOD 10 ;
+
+    inv <- inv * 10 + chiffre ;
+
+    N <- N DIV 10 ;
+
+Done ;
+
+Afficher(inv) ;
+```
+
+End.
+
+
+===========================================================================
+===========================================================================
+               SLIDE 5 — MINI DÉFI : NIVEAU EXAMEN
+===========================================================================
+===========================================================================
+
+Titre :
+Mini défi — Niveau examen
+
+Sous-titre discret :
+Combiner plusieurs notions dans un seul algorithme.
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE — CONVERSION DÉCIMAL → BINAIRE
+
+Énoncé :
+
+Écrire un algorithme qui permet de convertir un entier positif N de la base décimale vers la base binaire.
+
+L’algorithme doit :
+
+* lire un entier positif N
+* effectuer les transformations nécessaires
+* construire progressivement l’écriture binaire
+* afficher le résultat final
+
+Important :
+
+* réfléchir à la manière de récupérer chaque chiffre binaire
+* faire des recherches sur le principe de conversion décimal → binaire
+* essayer de construire l’algorithme étape par étape avant de regarder une correction
+
+Exemples :
+
+Exemple 1 :
+N = 13
+
+Résultat :
+1101
+
+━━━━━━━━━━━━━━━━━━
+
+Exemple 2 :
+N = 25
+
+Résultat :
+11001
+
+━━━━━━━━━━━━━━━━━━
+
+Exemple 3 :
+N = 8
+
+Résultat :
+1000
+
+
+===========================================================================
+===========================================================================
+                SLIDE 6 — CORRECTION DU MINI DÉFI
+===========================================================================
+===========================================================================
+
+Titre :
+Correction — Conversion Décimal → Binaire
+
+Sous-titre discret :
+Comprendre la logique de construction du résultat.
+
+━━━━━━━━━━━━━━━━━━
+
+Méthode de réflexion :
+
+En binaire :
+
+* chaque chiffre ne peut valoir que 0 ou 1
+* on récupère les chiffres binaires un par un
+
+On remarque que :
+
+* MOD 2 permet de récupérer le dernier chiffre binaire
+* DIV 2 permet de passer à l’étape suivante
+* une boucle WHILE est adaptée
+
+Important :
+
+Les chiffres binaires sont obtenus dans l’ordre inverse.
+
+Il faut donc :
+
+* reconstruire progressivement le résultat
+* replacer chaque nouveau chiffre à la bonne position
+
+━━━━━━━━━━━━━━━━━━
+
+Exemple rapide :
+
+N = 13
+
+Les restes successifs obtenus sont :
+
+1 → 0 → 1 → 1
+
+Le résultat final est donc :
+
+1101
+
+━━━━━━━━━━━━━━━━━━
+
+Pseudo-code :
+
+Algorithm DecimalVersBinaire;
+
+Var
+entier : N, binaire, reste, p ;
+
+Begin
+
+```
+Lire(N) ;
+
+binaire <- 0 ;
+p <- 1 ;
+
+While N <> 0 do
+
+    reste <- N MOD 2 ;
+
+    binaire <- binaire + reste * p ;
+
+    p <- p * 10 ;
+
+    N <- N DIV 2 ;
+
+Done ;
+
+Afficher(binaire) ;
+```
+
+End.
+
+━━━━━━━━━━━━━━━━━━
+
+Points importants :
+
+* MOD récupère le chiffre binaire
+* DIV réduit progressivement le nombre
+* p représente la position du chiffre dans le résultat
+* le résultat est construit chiffre par chiffre
+

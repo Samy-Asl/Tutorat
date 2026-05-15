@@ -1,0 +1,665 @@
+===========================================================================
+===========================================================================
+                    SLIDE 18 - RAPPEL : FONCTIONS & PROCÉDURES
+===========================================================================
+===========================================================================
+
+Titre :
+Rappel — Fonctions & Procédures
+
+Sous-titre discret :
+Découper un problème en plusieurs blocs réutilisables.
+
+━━━━━━━━━━━━━━━━━━
+
+Idée essentielle :
+
+Une fonction ou une procédure permet :
+- de réutiliser du code
+- d’éviter les répétitions
+- de découper un problème complexe
+- d’organiser un algorithme proprement
+
+━━━━━━━━━━━━━━━━━━
+
+Différence principale :
+
+Fonction :
+- retourne une valeur
+- utilisée dans un calcul
+
+Procédure :
+- ne retourne pas de valeur
+- exécute une action
+
+━━━━━━━━━━━━━━━━━━
+
+Exemple de fonction :
+
+Function Somme(I a : entier, I b : entier) : entier ;
+
+Begin
+
+    Return a + b ;
+
+End ;
+
+━━━━━━━━━━━━━━━━━━
+
+Exemple d’utilisation :
+
+x <- Somme(3, 5) ;
+
+Résultat :
+x = 8
+
+━━━━━━━━━━━━━━━━━━
+
+Exemple de procédure :
+
+Procedure AfficherMessage() ;
+
+Begin
+
+    Afficher("Bonjour") ;
+
+End ;
+
+━━━━━━━━━━━━━━━━━━
+
+Exemple d’appel :
+
+AfficherMessage() ;
+
+━━━━━━━━━━━━━━━━━━
+
+Visualisation simple :
+
+Programme principal
+        ↓
+Appel de fonction
+        ↓
+Exécution du bloc
+        ↓
+Retour du résultat
+
+━━━━━━━━━━━━━━━━━━
+
+Points à retenir :
+
+- une fonction retourne une valeur
+- une procédure effectue une action
+- les paramètres permettent de transmettre des données
+- les fonctions rendent les algorithmes plus organisés
+
+===========================================================================
+===========================================================================
+                    SLIDE 19 - EXERCICES ESSENTIELS : FONCTIONS & PROCÉDURES
+===========================================================================
+===========================================================================
+
+Titre :
+Exercices essentiels — Fonctions & Procédures
+
+Sous-titre discret :
+Découper un algorithme en plusieurs blocs réutilisables.
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 1 — FONCTION VALEUR ABSOLUE
+
+Énoncé :
+
+Écrire une fonction ValeurAbsolue qui reçoit un entier x et retourne sa valeur absolue.
+
+Rappel :
+
+|x| =
+- x si x ≥ 0
+- -x si x < 0
+
+Exemples :
+
+Exemple 1 :
+
+x = -7
+
+Résultat :
+7
+
+━━━━━━━━━━━━━━━━━━
+
+Exemple 2 :
+
+x = 5
+
+Résultat :
+5
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 2 — FONCTION MAXIMUM
+
+Énoncé :
+
+Écrire une fonction Maximum qui reçoit deux entiers a et b et retourne la plus grande valeur.
+
+L’algorithme doit :
+- comparer les deux valeurs
+- retourner le maximum trouvé
+
+Exemples :
+
+Exemple 1 :
+
+a = 4
+b = 9
+
+Résultat :
+9
+
+━━━━━━━━━━━━━━━━━━
+
+Exemple 2 :
+
+a = 15
+b = 2
+
+Résultat :
+15
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 3 — PROCÉDURE D’AFFICHAGE D’UN TABLEAU
+
+Énoncé :
+
+Écrire une procédure AfficherTableau qui permet d’afficher tous les éléments d’un tableau T de taille N.
+
+L’algorithme doit :
+- recevoir le tableau et sa taille
+- parcourir le tableau
+- afficher toutes les valeurs
+
+Exemple :
+
+T = [4, 7, 2, 9]
+
+Résultat :
+
+4
+7
+2
+9
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 4 — FONCTION SOMME DES ÉLÉMENTS D’UN TABLEAU
+
+Énoncé :
+
+Écrire une fonction SommeTableau qui reçoit un tableau T de taille N et retourne la somme de ses éléments.
+
+L’algorithme doit :
+- parcourir le tableau
+- additionner les valeurs
+- retourner le résultat final
+
+Exemple :
+
+T = [3, 5, 2, 8]
+
+Résultat :
+18
+
+
+===========================================================================
+===========================================================================
+                    SLIDE 20 - CORRECTIONS : FONCTIONS & PROCÉDURES
+===========================================================================
+===========================================================================
+
+Titre :
+Corrections — Fonctions & Procédures
+
+Sous-titre discret :
+Comprendre comment découper un algorithme en blocs réutilisables.
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 1 — FONCTION VALEUR ABSOLUE
+
+Méthode de réflexion :
+
+On remarque que :
+- si le nombre est positif, on le retourne directement
+- si le nombre est négatif, on change son signe
+
+Une fonction est adaptée car :
+- on doit retourner une valeur
+
+Pseudo-code :
+
+Function ValeurAbsolue(I x : entier) : entier ;
+
+Begin
+
+    If x < 0 Then
+
+        Return -x ;
+
+    Else
+
+        Return x ;
+
+    Endif ;
+
+End ;
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 2 — FONCTION MAXIMUM
+
+Méthode de réflexion :
+
+On doit :
+- comparer deux valeurs
+- retourner la plus grande
+
+On remarque que :
+- une condition simple suffit
+- une fonction est adaptée car on retourne un résultat
+
+Pseudo-code :
+
+Function Maximum(I a : entier, I b : entier) : entier ;
+
+Begin
+
+    If a > b Then
+
+        Return a ;
+
+    Else
+
+        Return b ;
+
+    Endif ;
+
+End ;
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 3 — PROCÉDURE D’AFFICHAGE D’UN TABLEAU
+
+Méthode de réflexion :
+
+On doit :
+- parcourir toutes les cases du tableau
+- afficher les valeurs une par une
+
+Une procédure est adaptée car :
+- aucune valeur n’est retournée
+- on effectue uniquement un affichage
+
+Pseudo-code :
+
+Procedure AfficherTableau(I T : Array, I N : entier) ;
+
+Var
+    entier : i ;
+
+Begin
+
+    For i <- 0 to N-1 do
+
+        Afficher(T[i]) ;
+
+    EndFor ;
+
+End ;
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 4 — FONCTION SOMME DES ÉLÉMENTS D’UN TABLEAU
+
+Méthode de réflexion :
+
+On doit :
+- parcourir le tableau
+- accumuler les valeurs
+- retourner la somme finale
+
+On remarque que :
+- un accumulateur est nécessaire
+- la somme doit commencer à 0
+
+Pseudo-code :
+
+Function SommeTableau(I T : Array, I N : entier) : entier ;
+
+Var
+    entier : i, somme ;
+
+Begin
+
+    somme <- 0 ;
+
+    For i <- 0 to N-1 do
+
+        somme <- somme + T[i] ;
+
+    EndFor ;
+
+    Return somme ;
+
+End ;
+
+━━━━━━━━━━━━━━━━━━
+
+Points importants :
+
+- une fonction retourne une valeur avec Return
+- une procédure effectue une action sans Return
+- les paramètres permettent de transmettre des données
+- les fonctions rendent les algorithmes plus modulaires
+- les procédures évitent la répétition du code
+
+
+===========================================================================
+===========================================================================
+                    SLIDE 21 - MINI DÉFI : FONCTIONS & PROCÉDURES
+===========================================================================
+===========================================================================
+
+Titre :
+Mini défi — Niveau examen
+
+Sous-titre discret :
+Organiser un problème complexe grâce aux fonctions et procédures.
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE — ANALYSE DES NOMBRES PREMIERS D’UN TABLEAU
+
+Énoncé :
+
+On considère un tableau T de taille maximale 50 contenant des entiers positifs.
+
+Écrire un algorithme permettant :
+- d’extraire les nombres premiers du tableau
+- de stocker ces nombres dans un nouveau tableau P
+- de calculer la moyenne des nombres premiers trouvés
+- d’afficher le tableau final ainsi que la moyenne obtenue
+
+━━━━━━━━━━━━━━━━━━
+
+Contraintes :
+
+L’algorithme doit obligatoirement utiliser :
+
+- une fonction EstPremier(x)
+- une procédure ExtrairePremiers(...)
+- une fonction Moyenne(...)
+
+━━━━━━━━━━━━━━━━━━
+
+Important :
+
+La procédure d’extraction doit :
+- remplir le tableau P
+- mettre à jour le nombre total de nombres premiers trouvés
+
+━━━━━━━━━━━━━━━━━━
+
+Rappels :
+
+Un nombre premier :
+- possède exactement deux diviseurs
+- 1 n’est pas un nombre premier
+
+━━━━━━━━━━━━━━━━━━
+
+Exemple :
+
+T = [4, 7, 11, 8, 13, 10, 5]
+
+Nombres premiers trouvés :
+
+P = [7, 11, 13, 5]
+
+Moyenne :
+
+(7 + 11 + 13 + 5) / 4 = 9
+
+Résultat :
+Moyenne = 9
+
+━━━━━━━━━━━━━━━━━━
+
+Conseil :
+
+Avant d’écrire le programme principal :
+- réfléchir aux rôles de chaque fonction
+- identifier les entrées et sorties
+- séparer clairement les responsabilités
+
+===========================================================================
+===========================================================================
+                    SLIDE 22 - CONSTRUCTION DES BLOCS
+===========================================================================
+===========================================================================
+
+Titre :
+Correction — Construction des fonctions et procédures
+
+Sous-titre discret :
+Découper le problème en plusieurs responsabilités.
+
+━━━━━━━━━━━━━━━━━━
+
+Méthode de réflexion :
+
+Le problème doit être séparé en plusieurs parties :
+
+1. Vérifier si un nombre est premier
+2. Extraire les nombres premiers du tableau
+3. Calculer la moyenne des valeurs trouvées
+
+Chaque bloc possède un rôle précis.
+
+━━━━━━━━━━━━━━━━━━
+
+Organisation logique :
+
+Fonction EstPremier(x)
+        ↓
+Procédure ExtrairePremiers(...)
+        ↓
+Fonction Moyenne(...)
+        ↓
+Programme principal
+
+━━━━━━━━━━━━━━━━━━
+
+FONCTION — EstPremier
+
+Méthode :
+- tester les diviseurs possibles
+- vérifier si le nombre possède plus de deux diviseurs
+
+Pseudo-code :
+
+Function EstPremier(I x : entier) : booleen ;
+
+Var
+    entier : i ;
+
+Begin
+
+    If x <= 1 Then
+
+        Return Faux ;
+
+    Endif ;
+
+    For i <- 2 to x-1 do
+
+        If x MOD i = 0 Then
+
+            Return Faux ;
+
+        Endif ;
+
+    EndFor ;
+
+    Return Vrai ;
+
+End ;
+
+━━━━━━━━━━━━━━━━━━
+
+PROCÉDURE — ExtrairePremiers
+
+Méthode :
+- parcourir le tableau initial
+- tester chaque valeur
+- copier uniquement les nombres premiers
+
+Important :
+- le tableau P est rempli progressivement
+- NP représente le nombre final de nombres premiers
+
+Pseudo-code :
+
+Procedure ExtrairePremiers
+(
+    I T : Array,
+    I N : entier,
+    IO P : Array,
+    IO NP : entier
+) ;
+
+Var
+    entier : i ;
+
+Begin
+
+    NP <- 0 ;
+
+    For i <- 0 to N-1 do
+
+        If EstPremier(T[i]) = Vrai Then
+
+            P[NP] <- T[i] ;
+
+            NP <- NP + 1 ;
+
+        Endif ;
+
+    EndFor ;
+
+End.
+
+
+===========================================================================
+===========================================================================
+                    SLIDE 23 - EXPLOITATION DES BLOCS
+===========================================================================
+===========================================================================
+
+Titre :
+Correction — Utilisation des fonctions et procédures
+
+Sous-titre discret :
+Assembler les différents blocs dans le programme principal.
+
+━━━━━━━━━━━━━━━━━━
+
+FONCTION — Moyenne
+
+Méthode :
+- additionner les éléments du tableau
+- diviser par le nombre d’éléments
+
+Pseudo-code :
+
+Function Moyenne
+(
+    I T : Array,
+    I N : entier
+) : reel ;
+
+Var
+    entier : i, somme ;
+
+Begin
+
+    somme <- 0 ;
+
+    For i <- 0 to N-1 do
+
+        somme <- somme + T[i] ;
+
+    EndFor ;
+
+    Return somme / N ;
+
+End ;
+
+━━━━━━━━━━━━━━━━━━
+
+PROGRAMME PRINCIPAL
+
+Méthode :
+- lire le tableau initial
+- extraire les nombres premiers
+- calculer la moyenne
+- afficher les résultats
+
+Pseudo-code :
+
+Algorithm AnalysePremiers;
+
+Var
+    entier : N, i, NP ;
+    reel : moy ;
+    T : Array[50] of Integer ;
+    P : Array[50] of Integer ;
+
+Begin
+
+    Lire(N) ;
+
+    For i <- 0 to N-1 do
+
+        Lire(T[i]) ;
+
+    EndFor ;
+
+    ExtrairePremiers(T, N, P, NP) ;
+
+    moy <- Moyenne(P, NP) ;
+
+    Afficher("Nombres premiers :") ;
+
+    For i <- 0 to NP-1 do
+
+        Afficher(P[i]) ;
+
+    EndFor ;
+
+    Afficher("Moyenne :") ;
+    Afficher(moy) ;
+
+End.
+
+━━━━━━━━━━━━━━━━━━
+
+Points importants :
+
+- chaque fonction possède un rôle précis
+- les procédures permettent de modifier plusieurs variables
+- NP représente la taille réelle du tableau P
+- le programme principal devient plus lisible
+- les fonctions rendent l’algorithme modulaire

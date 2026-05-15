@@ -1,0 +1,95 @@
+===========================================================================
+===========================================================================
+                    PROMPT D’UTILISATION DES FICHIERS
+===========================================================================
+===========================================================================
+
+Je vais maintenant te fournir plusieurs fichiers texte contenant le contenu complet des slides.
+
+IMPORTANT :
+Chaque fichier correspond à une partie précise du tutorat.
+
+Tu dois :
+- lire tous les fichiers
+- conserver exactement leur contenu
+- transformer ce contenu en un vrai support PDF moderne et visuel
+
+━━━━━━━━━━━━━━━━━━
+IMPORTANT
+━━━━━━━━━━━━━━━━━━
+
+Les fichiers contiennent déjà :
+- les titres
+- les exercices
+- les corrections
+- les pseudo-codes
+- la structure pédagogique
+
+Tu ne dois PAS :
+- réinventer le contenu
+- modifier les algorithmes
+- changer la syntaxe
+- simplifier les exercices
+
+Tu dois uniquement :
+- créer un excellent rendu visuel
+- organiser les slides intelligemment
+- améliorer la lisibilité
+- créer une vraie hiérarchie visuelle
+
+━━━━━━━━━━━━━━━━━━
+ORGANISATION DES FICHIERS
+━━━━━━━━━━━━━━━━━━
+
+Chaque fichier contient :
+- plusieurs slides
+- déjà numérotées
+- déjà structurées
+
+Tu dois respecter :
+- l’ordre des slides
+- les séparations
+- les titres
+- la progression pédagogique
+
+━━━━━━━━━━━━━━━━━━
+IMPORTANT — STRUCTURE
+━━━━━━━━━━━━━━━━━━
+
+Quand tu lis les fichiers :
+- chaque séparation SLIDE correspond à une vraie slide
+- ne pas fusionner plusieurs slides
+- ne pas supprimer de contenu
+
+━━━━━━━━━━━━━━━━━━
+RENDU FINAL DEMANDÉ
+━━━━━━━━━━━━━━━━━━
+
+Je veux :
+- un PDF moderne
+- cohérent visuellement
+- agréable à projeter
+- propre
+- aéré
+- professionnel
+- très lisible
+
+avec :
+- palette bleu / vert / blanc
+- rectangles arrondis
+- style moderne universitaire
+- hiérarchie visuelle forte
+
+━━━━━━━━━━━━━━━━━━
+IMPORTANT
+━━━━━━━━━━━━━━━━━━
+
+Le résultat final doit donner l’impression :
+- d’un vrai tutorat universitaire premium
+- d’un vrai diaporama pédagogique moderne
+- d’un support interactif et vivant
+
+et PAS :
+- d’un document Word exporté en PDF
+- d’un manuel académique lourd
+- d’un bloc de texte sans design

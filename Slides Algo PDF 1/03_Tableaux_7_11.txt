@@ -1,0 +1,675 @@
+===========================================================================
+===========================================================================
+               SLIDE 7 — RAPPEL : TABLEAUX 1D (VECTEURS)
+===========================================================================
+===========================================================================
+
+Titre :
+Rappel — Tableaux 1D (Vecteurs)
+
+Sous-titre discret :
+Voir clairement la structure d’un tableau avant de le manipuler.
+
+━━━━━━━━━━━━━━━━━━
+
+Idée essentielle :
+
+Un tableau 1D sert à stocker plusieurs valeurs du même type dans une seule structure.
+
+On doit toujours distinguer :
+
+* l’indice : la position dans le tableau
+* la valeur : le contenu de la case
+
+━━━━━━━━━━━━━━━━━━
+
+Déclaration :
+
+Var
+T : Array[10] of entier ;
+
+━━━━━━━━━━━━━━━━━━
+
+Visualisation claire du tableau :
+
+Indices :
+┌───────┬───────┬───────┬───────┬───────┐
+│   0   │   1   │   2   │   3   │   4   │
+├───────┼───────┼───────┼───────┼───────┤
+│   5   │   8   │   2   │   9   │   1   │
+└───────┴───────┴───────┴───────┴───────┘
+Valeurs :
+T[0]  T[1]  T[2]  T[3]  T[4]
+
+Lecture du tableau :
+
+* T[0] = 5
+* T[1] = 8
+* T[2] = 2
+* T[3] = 9
+* T[4] = 1
+
+━━━━━━━━━━━━━━━━━━
+
+Comment lire un élément :
+
+T[2] = 2
+
+On lit cette écriture de la façon suivante :
+
+* T : nom du tableau
+* [2] : indice de la case
+* 2 : valeur stockée dans cette case
+
+━━━━━━━━━━━━━━━━━━
+
+Parcours du tableau :
+
+Pour visiter toutes les cases du tableau, on utilise généralement une boucle FOR.
+
+For i <- 0 to N-1 do
+
+```
+Afficher(T[i]) ;
+```
+
+EndFor ;
+
+━━━━━━━━━━━━━━━━━━
+
+Visualisation du parcours :
+
+i = 0 → on lit T[0] = 5
+i = 1 → on lit T[1] = 8
+i = 2 → on lit T[2] = 2
+i = 3 → on lit T[3] = 9
+i = 4 → on lit T[4] = 1
+
+━━━━━━━━━━━━━━━━━━
+
+Points à retenir :
+
+* un tableau contient plusieurs cases mémoire
+* chaque case a un indice précis
+* l’indice commence en général à 0
+* pour parcourir un tableau, la boucle FOR est la plus naturelle
+* il faut toujours bien distinguer l’indice et la valeur
+
+===========================================================================
+===========================================================================
+             SLIDE 8 — EXERCICES ESSENTIELS : TABLEAUX 1D
+===========================================================================
+===========================================================================
+
+
+Titre :
+Exercices essentiels — Tableaux 1D
+
+Sous-titre discret :
+Manipuler, parcourir et modifier un tableau efficacement.
+
+Important :
+
+Dans tous les exercices suivants :
+- les tableaux seront considérés de taille maximale N
+- la variable N sera utilisée comme une constante représentant la taille du tableau
+- on supposera que les tableaux sont déjà correctement déclarés
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 1 — COMPTER LES NOMBRES PAIRS
+
+Énoncé :
+
+Écrire un algorithme qui permet de compter le nombre de valeurs paires dans un tableau T de taille N.
+
+L’algorithme doit :
+
+* lire les éléments du tableau
+* parcourir toutes les cases
+* vérifier si chaque valeur est paire
+* afficher le nombre total de valeurs paires
+
+Exemples :
+
+Exemple 1 :
+T = [4, 7, 2, 9, 8]
+
+Résultat :
+3 valeurs paires
+
+━━━━━━━━━━━━━━━━━━
+
+Exemple 2 :
+T = [1, 3, 5, 7]
+
+Résultat :
+0 valeur paire
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 2 — TROUVER LES DOUBLONS D’UN TABLEAU
+
+Énoncé :
+
+Écrire un algorithme qui permet de détecter les valeurs répétées dans un tableau T de taille N.
+
+L’algorithme doit :
+
+* comparer les éléments du tableau entre eux
+* détecter les valeurs présentes plusieurs fois
+* afficher les doublons trouvés
+
+Important :
+CHAQUE valeur du tableau doit être comparée avec les valeurs suivantes.
+
+Exemples :
+
+Exemple 1 :
+T = [4, 7, 2, 7, 9]
+
+Résultat :
+7 est un doublon
+
+━━━━━━━━━━━━━━━━━━
+
+Exemple 2 :
+T = [5, 1, 3, 5, 1]
+
+Résultat :
+5 est un doublon
+1 est un doublon
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 3 — TRIER UN TABLEAU
+
+Énoncé :
+
+Écrire un algorithme qui permet de trier un tableau T de taille N dans l’ordre croissant.
+
+L’algorithme doit :
+
+* parcourir le tableau
+* comparer les valeurs
+* échanger les éléments mal placés
+* afficher le tableau trié
+
+Exemples :
+
+Exemple 1 :
+T = [7, 2, 9, 1]
+
+Résultat :
+[1, 2, 7, 9]
+
+━━━━━━━━━━━━━━━━━━
+
+Exemple 2 :
+T = [5, 3, 8, 4]
+
+Résultat :
+[3, 4, 5, 8]
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 4 — DÉCALAGE D’UN TABLEAU
+
+Énoncé :
+
+Écrire un algorithme qui permet d’effectuer un décalage circulaire vers la droite d’un tableau T.
+
+Après le décalage :
+
+* le dernier élément devient le premier
+* les autres éléments sont décalés d’une position vers la droite
+
+Exemples :
+
+Exemple 1 :
+T = [4, 7, 2, 9]
+
+Résultat :
+[9, 4, 7, 2]
+
+━━━━━━━━━━━━━━━━━━
+
+Exemple 2 :
+T = [1, 5, 8, 3]
+
+Résultat :
+[3, 1, 5, 8]
+
+
+===========================================================================
+===========================================================================
+             SLIDE 9 — MÉTHODE & CORRECTIONS : TABLEAUX 1D
+===========================================================================
+===========================================================================
+
+Titre :
+Comment résoudre ces exercices ?
+
+Sous-titre discret :
+Comprendre la logique de parcours et de manipulation des tableaux.
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 1 — COMPTER LES NOMBRES PAIRS
+
+Méthode de réflexion :
+
+On doit :
+
+* parcourir tout le tableau
+* vérifier chaque valeur
+* compter les valeurs paires
+
+On remarque que :
+
+* un nombre pair vérifie :
+  T[i] MOD 2 = 0
+* une boucle FOR est adaptée
+* un compteur doit être initialisé à 0
+
+Pseudo-code :
+
+Algorithm CompterPairs;
+
+Var
+entier : N, i, cpt ;
+T : Array[100] of Integer ;
+
+Begin
+
+```
+Lire(N) ;
+
+For i <- 0 to N-1 do
+
+    Lire(T[i]) ;
+
+EndFor ;
+
+cpt <- 0 ;
+
+For i <- 0 to N-1 do
+
+    If T[i] MOD 2 = 0 Then
+
+        cpt <- cpt + 1 ;
+
+    Endif ;
+
+EndFor ;
+
+Afficher(cpt) ;
+```
+
+End.
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 2 — TROUVER LES DOUBLONS
+
+Méthode de réflexion :
+
+Chaque élément doit être comparé avec les éléments suivants.
+
+On remarque que :
+
+* une seule boucle ne suffit pas
+* il faut une boucle imbriquée
+* chaque T[i] est comparé avec T[j]
+
+Important :
+
+* éviter de comparer un élément avec lui-même
+* commencer j à i + 1
+
+Pseudo-code :
+
+Algorithm Doublons;
+
+Var
+entier : N, i, j ;
+T : Array[100] of Integer ;
+
+Begin
+
+```
+Lire(N) ;
+
+For i <- 0 to N-1 do
+
+    Lire(T[i]) ;
+
+EndFor ;
+
+For i <- 0 to N-2 do
+
+    For j <- i + 1 to N-1 do
+
+        If T[i] = T[j] Then
+
+            Afficher(T[i]) ;
+
+        Endif ;
+
+    EndFor ;
+
+EndFor ;
+```
+
+End.
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 3 — TRIER UN TABLEAU
+
+Méthode de réflexion :
+
+On doit :
+
+* comparer les éléments
+* échanger les valeurs mal placées
+* répéter le parcours plusieurs fois
+
+On remarque que :
+
+* une double boucle FOR est adaptée
+* une variable temporaire est nécessaire pour l’échange
+
+Important :
+
+* ne jamais écraser une valeur avant de la sauvegarder
+
+Pseudo-code :
+
+Algorithm TriTableau;
+
+Var
+entier : N, i, j, temp ;
+T : Array[100] of Integer ;
+
+Begin
+
+```
+Lire(N) ;
+
+For i <- 0 to N-1 do
+
+    Lire(T[i]) ;
+
+EndFor ;
+
+For i <- 0 to N-2 do
+
+    For j <- i + 1 to N-1 do
+
+        If T[i] > T[j] Then
+
+            temp <- T[i] ;
+            T[i] <- T[j] ;
+            T[j] <- temp ;
+
+        Endif ;
+
+    EndFor ;
+
+EndFor ;
+
+Afficher("Tableau trié :") ;
+
+For i <- 0 to N-1 do
+
+    Afficher(T[i]) ;
+
+EndFor ;
+```
+
+End.
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 4 — DÉCALAGE D’UN TABLEAU
+
+Méthode de réflexion :
+
+Le dernier élément doit devenir le premier.
+
+On remarque que :
+
+* il faut sauvegarder la dernière valeur
+* les éléments doivent être déplacés de droite vers gauche
+* une variable temporaire est nécessaire
+
+Important :
+
+* si une valeur est écrasée trop tôt, elle sera perdue
+
+Pseudo-code :
+
+Algorithm DecalageDroite;
+
+Var
+entier : N, i, tmp ;
+T : Array[100] of Integer ;
+
+Begin
+
+```
+Lire(N) ;
+
+For i <- 0 to N-1 do
+
+    Lire(T[i]) ;
+
+EndFor ;
+
+tmp <- T[N-1] ;
+
+For i <- N-1 to 1 do
+
+    T[i] <- T[i-1] ;
+
+EndFor ;
+
+T[0] <- tmp ;
+
+For i <- 0 to N-1 do
+
+    Afficher(T[i]) ;
+
+EndFor ;
+```
+
+End.
+
+===========================================================================
+===========================================================================
+                    SLIDE 10 - MINI DÉFI TABLEAUX
+===========================================================================
+===========================================================================
+
+EXERCICE — TROUVER 3 VALEURS DONT LA SOMME VAUT X
+
+Énoncé :
+
+Écrire un algorithme qui permet de trouver trois valeurs d’un tableau T de taille N dont la somme est égale à une valeur X donnée.
+
+L’algorithme doit :
+- lire les éléments du tableau
+- lire la valeur X
+- tester les différentes combinaisons possibles
+- afficher les trois valeurs trouvées
+
+Important :
+- les trois valeurs doivent être différentes dans le tableau
+- une même case ne doit pas être utilisée plusieurs fois
+
+━━━━━━━━━━━━━━━━━━
+
+Exemple 1 :
+
+T = [2, 7, 11, 15, 4]
+
+X = 22
+
+Résultat :
+
+7 + 11 + 4 = 22
+
+━━━━━━━━━━━━━━━━━━
+
+Exemple 2 :
+
+T = [1, 5, 9, 3, 8]
+
+X = 17
+
+Résultat :
+
+5 + 9 + 3 = 17
+
+━━━━━━━━━━━━━━━━━━
+
+Exemple 3 :
+
+T = [4, 2, 10, 6]
+
+X = 30
+
+Résultat :
+Aucune combinaison trouvée
+
+
+===========================================================================
+===========================================================================
+                    SLIDE 11 - CORRECTION DU MINI DÉFI
+===========================================================================
+===========================================================================
+
+Titre :
+Correction — Trouver 3 valeurs dont la somme vaut X
+
+Sous-titre discret :
+Comprendre comment tester plusieurs combinaisons dans un tableau.
+
+━━━━━━━━━━━━━━━━━━
+
+Méthode de réflexion :
+
+On doit :
+- parcourir le tableau plusieurs fois
+- tester plusieurs combinaisons de valeurs
+- vérifier si la somme obtenue vaut X
+
+On remarque que :
+- une seule boucle ne suffit pas
+- deux boucles ne suffisent pas non plus
+- il faut tester 3 valeurs différentes
+
+Donc :
+- une triple boucle FOR est adaptée
+
+━━━━━━━━━━━━━━━━━━
+
+Important :
+
+Chaque boucle représente :
+- une position différente dans le tableau
+
+Il faut éviter :
+- d’utiliser plusieurs fois la même case
+- de refaire les mêmes combinaisons
+
+Astuce :
+- commencer j à i + 1
+- commencer k à j + 1
+
+━━━━━━━━━━━━━━━━━━
+
+Exemple rapide :
+
+T = [2, 7, 11, 15, 4]
+
+X = 22
+
+Combinaisons testées :
+
+2 + 7 + 11 = 20
+
+2 + 7 + 15 = 24
+
+2 + 7 + 4 = 13
+
+...
+
+7 + 11 + 4 = 22
+
+Combinaison trouvée.
+
+━━━━━━━━━━━━━━━━━━
+
+Pseudo-code :
+
+Algorithm SommeX;
+
+Var
+    entier : N, X, i, j, k ;
+    T : Array[100] of Integer ;
+    booleen : trouve ;
+
+Begin
+
+    Lire(N) ;
+
+    For i <- 0 to N-1 do
+
+        Lire(T[i]) ;
+
+    EndFor ;
+
+    Lire(X) ;
+
+    trouve <- Faux ;
+
+    For i <- 0 to N-3 do
+
+        For j <- i + 1 to N-2 do
+
+            For k <- j + 1 to N-1 do
+
+                If T[i] + T[j] + T[k] = X Then
+
+                    Afficher(T[i]) ;
+                    Afficher(T[j]) ;
+                    Afficher(T[k]) ;
+
+                    trouve <- Vrai ;
+
+                Endif ;
+
+            EndFor ;
+
+        EndFor ;
+
+    EndFor ;
+
+    If trouve = Faux Then
+
+        Afficher("Aucune combinaison trouvée") ;
+
+    Endif ;
+
+End.
+
+━━━━━━━━━━━━━━━━━━
+
+Points importants :
+
+- chaque boucle représente une valeur différente
+- les indices doivent être différents
+- les bornes des boucles sont très importantes
+- les combinaisons sont testées progressivement
+- le booléen permet de savoir si une solution existe

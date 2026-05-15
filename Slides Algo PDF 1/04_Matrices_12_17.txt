@@ -1,0 +1,743 @@
+===========================================================================
+===========================================================================
+                    SLIDE 12 - RAPPEL : MATRICES 2D
+===========================================================================
+===========================================================================
+
+Titre :
+Rappel — Matrices 2D
+
+Sous-titre discret :
+Comprendre comment stocker et parcourir des données sur plusieurs lignes et colonnes.
+
+━━━━━━━━━━━━━━━━━━
+
+Idée essentielle :
+
+Une matrice 2D est un tableau composé :
+- de lignes
+- de colonnes
+
+Chaque valeur possède :
+- un indice de ligne
+- un indice de colonne
+
+━━━━━━━━━━━━━━━━━━
+
+Déclaration :
+
+Var
+    M : Array[10][10] of Integer ;
+
+━━━━━━━━━━━━━━━━━━
+
+Visualisation claire d’une matrice :
+
+            Colonnes
+              0    1    2
+
+          ┌────┬────┬────┐
+Ligne 0   │  5 │  8 │  2 │
+          ├────┼────┼────┤
+Ligne 1   │  9 │  1 │  7 │
+          ├────┼────┼────┤
+Ligne 2   │  4 │  6 │  3 │
+          └────┴────┴────┘
+
+━━━━━━━━━━━━━━━━━━
+
+Lecture d’un élément :
+
+M[1][2] = 7
+
+Explication :
+- M représente la matrice
+- [1] représente la ligne
+- [2] représente la colonne
+- la valeur stockée est 7
+
+━━━━━━━━━━━━━━━━━━
+
+Parcours d’une matrice :
+
+Pour parcourir toutes les cases :
+
+For i <- 0 to N-1 do
+
+    For j <- 0 to P-1 do
+
+        Afficher(M[i][j]) ;
+
+    EndFor ;
+
+EndFor ;
+
+━━━━━━━━━━━━━━━━━━
+
+Visualisation du parcours :
+
+i = 0, j = 0 → M[0][0] = 5
+
+i = 0, j = 1 → M[0][1] = 8
+
+i = 0, j = 2 → M[0][2] = 2
+
+━━━━━━━━━━━━━━━━━━
+
+Points à retenir :
+
+- une matrice possède plusieurs lignes et colonnes
+- chaque case possède deux indices
+- i représente généralement les lignes
+- j représente généralement les colonnes
+- une double boucle FOR permet de parcourir toute la matrice
+
+
+===========================================================================
+===========================================================================
+                    SLIDE 13 - EXERCICES ESSENTIELS : MATRICES 2D
+===========================================================================
+===========================================================================
+
+Titre :
+Exercices essentiels — Matrices 2D
+
+Sous-titre discret :
+Parcourir, comparer et manipuler une matrice efficacement.
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 1 — TROUVER LE PLUS GRAND ÉLÉMENT
+
+Énoncé :
+
+Écrire un algorithme qui permet de trouver la plus grande valeur d’une matrice M de taille N × P.
+
+L’algorithme doit :
+- parcourir toutes les cases de la matrice
+- comparer les différentes valeurs
+- afficher le plus grand élément trouvé
+
+Exemples :
+
+Exemple 1 :
+
+| 5  8  2 |
+| 9  1  7 |
+| 4  6  3 |
+
+Résultat :
+9
+
+━━━━━━━━━━━━━━━━━━
+
+Exemple 2 :
+
+| 12  4 |
+| 7   15 |
+
+Résultat :
+15
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 2 — SOMME DES COLONNES
+
+Énoncé :
+
+Écrire un algorithme qui permet de calculer la somme de chaque colonne d’une matrice M de taille N × P.
+
+Les sommes calculées doivent être stockées dans un tableau S.
+
+L’algorithme doit :
+- parcourir les colonnes de la matrice
+- additionner les éléments de chaque colonne
+- stocker les résultats dans un tableau
+- afficher le tableau des sommes
+
+Exemples :
+
+Exemple 1 :
+
+| 1  2  3 |
+| 4  5  6 |
+
+Résultat :
+
+S = [5, 7, 9]
+
+━━━━━━━━━━━━━━━━━━
+
+Exemple 2 :
+
+| 2  1 |
+| 7  3 |
+| 4  6 |
+
+Résultat :
+
+S = [13, 10]
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 3 — MATRICE SYMÉTRIQUE
+
+Énoncé :
+
+Écrire un algorithme qui permet de vérifier si une matrice carrée M est symétrique.
+
+Une matrice est symétrique lorsque :
+
+M[i][j] = M[j][i]
+
+Important :
+La symétrie se fait par rapport à la diagonale principale.
+
+L’algorithme doit :
+- comparer les éléments symétriques
+- vérifier si toutes les valeurs correspondent
+- afficher le résultat final
+
+Exemples :
+
+Exemple 1 :
+
+| 1  2  3 |
+| 2  5  6 |
+| 3  6  9 |
+
+Résultat :
+Matrice symétrique
+
+━━━━━━━━━━━━━━━━━━
+
+Exemple 2 :
+
+| 1  4 |
+| 2  5 |
+
+Résultat :
+Matrice non symétrique
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 4 — ÉCHANGE DES DIAGONALES
+
+Énoncé :
+
+Écrire un algorithme qui permet d’échanger les valeurs de la diagonale principale et de la diagonale secondaire d’une matrice carrée M.
+
+Rappel :
+- diagonale principale :
+  i = j
+- diagonale secondaire :
+  i + j = N - 1
+
+L’algorithme doit :
+- parcourir les diagonales
+- échanger les valeurs correspondantes
+- afficher la nouvelle matrice
+
+Exemple :
+
+Avant :
+
+| 1  2  3 |
+| 4  5  6 |
+| 7  8  9 |
+
+Après échange :
+
+| 3  2  1 |
+| 4  5  6 |
+| 9  8  7 |
+
+
+===========================================================================
+===========================================================================
+                    SLIDE 14 - CORRECTIONS : PARCOURS DE MATRICES
+===========================================================================
+===========================================================================
+
+Titre :
+Corrections — Parcours & Calculs matriciels
+
+Sous-titre discret :
+Comprendre comment parcourir efficacement une matrice.
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 1 — TROUVER LE PLUS GRAND ÉLÉMENT
+
+Méthode de réflexion :
+
+On doit :
+- parcourir toutes les cases de la matrice
+- comparer les différentes valeurs
+- conserver le maximum trouvé
+
+On remarque que :
+- une double boucle FOR est nécessaire
+- une variable max doit être utilisée
+
+Important :
+- le maximum doit être initialisé avec la première valeur de la matrice
+- éviter une initialisation arbitraire
+
+Pseudo-code :
+
+Algorithm MaxMatrice;
+
+Var
+    entier : N, P, i, j, max ;
+    M : Array[100][100] of Integer ;
+
+Begin
+
+    Lire(N) ;
+    Lire(P) ;
+
+    For i <- 0 to N-1 do
+
+        For j <- 0 to P-1 do
+
+            Lire(M[i][j]) ;
+
+        EndFor ;
+
+    EndFor ;
+
+    max <- M[0][0] ;
+
+    For i <- 0 to N-1 do
+
+        For j <- 0 to P-1 do
+
+            If M[i][j] > max Then
+
+                max <- M[i][j] ;
+
+            Endif ;
+
+        EndFor ;
+
+    EndFor ;
+
+    Afficher(max) ;
+
+End.
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 2 — SOMME DES COLONNES
+
+Méthode de réflexion :
+
+On doit :
+- parcourir les colonnes une par une
+- additionner les valeurs de chaque colonne
+- stocker les résultats dans un tableau
+
+On remarque que :
+- la boucle extérieure parcourt les colonnes
+- la boucle intérieure parcourt les lignes
+
+Important :
+- la somme doit être réinitialisée pour chaque colonne
+
+Pseudo-code :
+
+Algorithm SommeColonnes;
+
+Var
+    entier : N, P, i, j, somme ;
+    M : Array[100][100] of Integer ;
+    S : Array[100] of Integer ;
+
+Begin
+
+    Lire(N) ;
+    Lire(P) ;
+
+    For i <- 0 to N-1 do
+
+        For j <- 0 to P-1 do
+
+            Lire(M[i][j]) ;
+
+        EndFor ;
+
+    EndFor ;
+
+    For j <- 0 to P-1 do
+
+        somme <- 0 ;
+
+        For i <- 0 to N-1 do
+
+            somme <- somme + M[i][j] ;
+
+        EndFor ;
+
+        S[j] <- somme ;
+
+    EndFor ;
+
+    For j <- 0 to P-1 do
+
+        Afficher(S[j]) ;
+
+    EndFor ;
+
+End.
+
+
+===========================================================================
+===========================================================================
+                    SLIDE 15 - CORRECTIONS : LOGIQUE MATRICIELLE
+===========================================================================
+===========================================================================
+
+Titre :
+Corrections — Réflexion matricielle avancée
+
+Sous-titre discret :
+Comprendre les relations entre les positions d’une matrice.
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 3 — MATRICE SYMÉTRIQUE
+
+Méthode de réflexion :
+
+Une matrice est symétrique lorsque :
+
+M[i][j] = M[j][i]
+
+La symétrie se fait par rapport à la diagonale principale.
+
+On remarque que :
+- les éléments de la diagonale vérifient :
+  i = j
+- les comparaisons importantes concernent les autres cases
+
+Important :
+- il suffit de comparer une moitié de la matrice
+- une seule différence suffit pour arrêter la vérification
+
+Pseudo-code :
+
+Algorithm Symetrique;
+
+Var
+    entier : N, i, j ;
+    booleen : sym ;
+    M : Array[100][100] of Integer ;
+
+Begin
+
+    Lire(N) ;
+
+    For i <- 0 to N-1 do
+
+        For j <- 0 to N-1 do
+
+            Lire(M[i][j]) ;
+
+        EndFor ;
+
+    EndFor ;
+
+    sym <- Vrai ;
+
+    For i <- 0 to N-1 do
+
+        For j <- i + 1 to N-1 do
+
+            If M[i][j] <> M[j][i] Then
+
+                sym <- Faux ;
+
+            Endif ;
+
+        EndFor ;
+
+    EndFor ;
+
+    If sym = Vrai Then
+
+        Afficher("Matrice symétrique") ;
+
+    Else
+
+        Afficher("Matrice non symétrique") ;
+
+    Endif ;
+
+End.
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE 4 — ÉCHANGE DES DIAGONALES
+
+Méthode de réflexion :
+
+On doit :
+- identifier les positions des deux diagonales
+- échanger les valeurs correspondantes
+
+On remarque que :
+- diagonale principale :
+  i = j
+- diagonale secondaire :
+  i + j = N - 1
+
+Important :
+- une variable temporaire est nécessaire
+- chaque échange doit conserver les anciennes valeurs
+
+Pseudo-code :
+
+Algorithm EchangeDiagonales;
+
+Var
+    entier : N, i, j, temp ;
+    M : Array[100][100] of Integer ;
+
+Begin
+
+    Lire(N) ;
+
+    For i <- 0 to N-1 do
+
+        For j <- 0 to N-1 do
+
+            Lire(M[i][j]) ;
+
+        EndFor ;
+
+    EndFor ;
+
+    For i <- 0 to N-1 do
+
+        temp <- M[i][i] ;
+
+        M[i][i] <- M[i][N-1-i] ;
+
+        M[i][N-1-i] <- temp ;
+
+    EndFor ;
+
+    For i <- 0 to N-1 do
+
+        For j <- 0 to N-1 do
+
+            Afficher(M[i][j]) ;
+
+        EndFor ;
+
+    EndFor ;
+
+End.
+
+
+===========================================================================
+===========================================================================
+                    SLIDE 16 - MINI DÉFI MATRICES
+===========================================================================
+===========================================================================
+
+Titre :
+Mini défi — Niveau examen
+
+Sous-titre discret :
+Réfléchir aux positions des éléments dans une matrice.
+
+━━━━━━━━━━━━━━━━━━
+
+EXERCICE — TRANSPOSITION D’UNE MATRICE
+
+Énoncé :
+
+Écrire un algorithme qui permet de calculer la transposée d’une matrice M de taille N × P.
+
+Principe :
+
+Lors d’une transposition :
+- les lignes deviennent des colonnes
+- les colonnes deviennent des lignes
+
+Autrement dit :
+
+M[i][j] devient M[j][i]
+
+L’algorithme doit :
+- lire une matrice M
+- construire sa transposée T
+- afficher la nouvelle matrice obtenue
+
+Important :
+- bien réfléchir aux positions des indices
+- observer la relation entre lignes et colonnes
+- essayer de comprendre comment les valeurs changent de position
+
+━━━━━━━━━━━━━━━━━━
+
+Exemple 1 :
+
+Matrice initiale :
+
+| 1  2  3 |
+| 4  5  6 |
+
+Résultat :
+
+| 1  4 |
+| 2  5 |
+| 3  6 |
+
+━━━━━━━━━━━━━━━━━━
+
+Exemple 2 :
+
+Matrice initiale :
+
+| 7  8 |
+| 1  9 |
+| 3  5 |
+
+Résultat :
+
+| 7  1  3 |
+| 8  9  5 |
+
+━━━━━━━━━━━━━━━━━━
+
+Conseil :
+
+Avant d’écrire le pseudo-code :
+- essayer de tracer quelques positions
+- observer ce que devient chaque élément
+- comparer les indices avant et après transformation
+
+
+
+===========================================================================
+===========================================================================
+                    SLIDE 17 - CORRECTION DU MINI DÉFI
+===========================================================================
+===========================================================================
+
+Titre :
+Correction — Transposition d’une matrice
+
+Sous-titre discret :
+Comprendre comment les lignes deviennent des colonnes.
+
+━━━━━━━━━━━━━━━━━━
+
+Méthode de réflexion :
+
+Lors d’une transposition :
+- les lignes deviennent des colonnes
+- les colonnes deviennent des lignes
+
+On remarque que :
+
+M[i][j] devient T[j][i]
+
+Important :
+- les indices sont inversés
+- il ne faut pas recopier directement :
+  T[i][j] <- M[i][j]
+- la nouvelle matrice possède :
+  P lignes et N colonnes
+
+━━━━━━━━━━━━━━━━━━
+
+Exemple rapide :
+
+Matrice initiale :
+
+| 1  2  3 |
+| 4  5  6 |
+
+Analyse des positions :
+
+M[0][1] = 2
+devient
+T[1][0] = 2
+
+━━━━━━━━━━━━━━━━━━
+
+Visualisation :
+
+Avant :
+
+| 1  2  3 |
+| 4  5  6 |
+
+Après :
+
+| 1  4 |
+| 2  5 |
+| 3  6 |
+
+━━━━━━━━━━━━━━━━━━
+
+Pseudo-code :
+
+Algorithm Transposee;
+
+Var
+    entier : N, P, i, j ;
+    M : Array[100][100] of Integer ;
+    T : Array[100][100] of Integer ;
+
+Begin
+
+    Lire(N) ;
+    Lire(P) ;
+
+    For i <- 0 to N-1 do
+
+        For j <- 0 to P-1 do
+
+            Lire(M[i][j]) ;
+
+        EndFor ;
+
+    EndFor ;
+
+    For i <- 0 to N-1 do
+
+        For j <- 0 to P-1 do
+
+            T[j][i] <- M[i][j] ;
+
+        EndFor ;
+
+    EndFor ;
+
+    For i <- 0 to P-1 do
+
+        For j <- 0 to N-1 do
+
+            Afficher(T[i][j]) ;
+
+        EndFor ;
+
+    EndFor ;
+
+End.
+
+━━━━━━━━━━━━━━━━━━
+
+Points importants :
+
+- la transposition inverse les indices
+- les dimensions changent :
+  N × P devient P × N
+- les doubles boucles sont indispensables
+- il faut bien distinguer :
+  lignes et colonnes

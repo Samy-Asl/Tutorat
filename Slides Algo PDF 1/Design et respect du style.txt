@@ -1,0 +1,172 @@
+===========================================================================
+===========================================================================
+                    DIRECTION ARTISTIQUE & CONSIGNES DE DESIGN
+===========================================================================
+===========================================================================
+
+Tu dois maintenant transformer les contenus des slides fournis en un vrai support de tutorat universitaire MODERNE et VISUEL.
+
+Le contenu pédagogique est déjà entièrement rédigé.
+Ton travail principal est maintenant :
+- la mise en page
+- le design
+- la hiérarchie visuelle
+- la lisibilité
+- l’aspect professionnel et moderne
+
+━━━━━━━━━━━━━━━━━━
+OBJECTIF VISUEL
+━━━━━━━━━━━━━━━━━━
+
+Le rendu final doit ressembler à :
+- un vrai support de tutorat interactif
+- un diaporama universitaire moderne
+- un support agréable à projeter
+- un document vivant et lisible
+
+Le PDF ne doit surtout PAS ressembler :
+- à un polycopié lourd
+- à un document académique froid
+- à un mur de texte
+- à un livre
+
+━━━━━━━━━━━━━━━━━━
+STYLE VISUEL DEMANDÉ
+━━━━━━━━━━━━━━━━━━
+
+Palette de couleurs :
+- Bleu clair
+- Vert doux
+- Blanc
+- Tons académiques modernes
+
+Style :
+- moderne
+- aéré
+- propre
+- élégant
+- professionnel
+- dynamique
+
+━━━━━━━━━━━━━━━━━━
+IMPORTANT — MISE EN PAGE
+━━━━━━━━━━━━━━━━━━
+
+Les slides doivent être :
+- respirables
+- bien espacées
+- faciles à lire en projection
+
+IMPORTANT :
+- éviter les gros blocs de texte
+- éviter les paragraphes serrés
+- privilégier les blocs visuels
+- séparer clairement les parties
+
+━━━━━━━━━━━━━━━━━━
+ÉLÉMENTS VISUELS À UTILISER
+━━━━━━━━━━━━━━━━━━
+
+Utiliser :
+- rectangles arrondis
+- encadrés légers
+- séparations visuelles propres
+- hiérarchie visuelle forte
+- titres très visibles
+- sous-titres discrets
+- espaces bien répartis
+
+━━━━━━━━━━━━━━━━━━
+POUR LES EXERCICES
+━━━━━━━━━━━━━━━━━━
+
+Les exercices doivent être affichés dans :
+- des blocs distincts
+- facilement identifiables
+- avec une bonne séparation visuelle
+
+Les exemples doivent être :
+- très lisibles
+- bien alignés
+- mis en valeur
+
+━━━━━━━━━━━━━━━━━━
+POUR LES CORRECTIONS
+━━━━━━━━━━━━━━━━━━
+
+Les corrections doivent être organisées en :
+- méthode de réflexion
+- points importants
+- pseudo-code
+
+Le pseudo-code doit être :
+- parfaitement aligné
+- facile à lire
+- visuellement propre
+
+━━━━━━━━━━━━━━━━━━
+TRÈS IMPORTANT — PSEUDO-CODE
+━━━━━━━━━━━━━━━━━━
+
+NE JAMAIS modifier :
+- la syntaxe
+- les noms
+- les structures
+- les algorithmes
+
+Le contenu fourni doit être conservé exactement.
+
+Ton rôle est :
+- améliorer le rendu visuel
+- organiser la slide
+- rendre le support agréable
+
+PAS :
+- réécrire les exercices
+- modifier les corrections
+- inventer du contenu
+
+━━━━━━━━━━━━━━━━━━
+VISUALISATIONS IMPORTANTES
+━━━━━━━━━━━━━━━━━━
+
+Quand c’est pertinent :
+- ajouter des schémas simples
+- visualisations mémoire
+- tableaux propres
+- flèches
+- structures visuelles
+
+Mais :
+- rester minimaliste
+- ne pas surcharger les slides
+
+━━━━━━━━━━━━━━━━━━
+IMPORTANT — PROJECTION
+━━━━━━━━━━━━━━━━━━
+
+Le document sera projeté pendant un tutorat.
+
+Donc :
+- texte suffisamment grand
+- contraste propre
+- slides lisibles à distance
+- pas de surcharge visuelle
+
+━━━━━━━━━━━━━━━━━━
+IMPORTANT — COMPORTEMENT ATTENDU
+━━━━━━━━━━━━━━━━━━
+
+Tu dois agir comme :
+- un designer pédagogique
+- un créateur de support universitaire moderne
+- quelqu’un qui optimise l’expérience d’apprentissage
+
+Le résultat final doit être :
+- fluide
+- moderne
+- cohérent
+- agréable
+- professionnel
+- pédagogique
+- interactif visuellement

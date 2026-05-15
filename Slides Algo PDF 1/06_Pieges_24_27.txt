@@ -1,0 +1,626 @@
+===========================================================================
+===========================================================================
+                    SLIDE 24 - PIÈGES CLASSIQUES : BOUCLES & CONDITIONS
+===========================================================================
+===========================================================================
+
+Titre :
+Pièges classiques — Boucles & Conditions
+
+Sous-titre discret :
+Identifier les erreurs les plus fréquentes en algorithmique.
+
+━━━━━━━━━━━━━━━━━━
+
+PIÈGE 1 — COMPTEUR MAL INITIALISÉ
+
+Code :
+
+Algorithm Exemple1;
+
+Var
+    entier : i, cpt ;
+
+Begin
+
+    For i <- 1 to 10 do
+
+        cpt <- cpt + 1 ;
+
+    EndFor ;
+
+    Afficher(cpt) ;
+
+End.
+
+Question :
+Pourquoi ce programme peut produire un résultat incorrect ?
+
+━━━━━━━━━━━━━━━━━━
+
+Correction :
+
+Le compteur cpt n’a jamais été initialisé.
+
+Il faut écrire :
+
+cpt <- 0 ;
+
+avant la boucle.
+
+━━━━━━━━━━━━━━━━━━
+
+PIÈGE 2 — ACCUMULATEUR ÉCRASÉ
+
+Code :
+
+Algorithm Exemple2;
+
+Var
+    entier : i, somme ;
+
+Begin
+
+    somme <- 0 ;
+
+    For i <- 1 to 5 do
+
+        somme <- i ;
+
+    EndFor ;
+
+    Afficher(somme) ;
+
+End.
+
+Question :
+Pourquoi la somme finale est incorrecte ?
+
+━━━━━━━━━━━━━━━━━━
+
+Correction :
+
+La variable somme est écrasée à chaque tour.
+
+Il faut écrire :
+
+somme <- somme + i ;
+
+━━━━━━━━━━━━━━━━━━
+
+PIÈGE 3 — CONDITION IMPOSSIBLE
+
+Code :
+
+If x < 5 And x > 10 Then
+
+    Afficher(x) ;
+
+Endif ;
+
+Question :
+Pourquoi cette condition ne peut jamais être vraie ?
+
+━━━━━━━━━━━━━━━━━━
+
+Correction :
+
+Un nombre ne peut pas être :
+- inférieur à 5
+ET
+- supérieur à 10
+
+en même temps.
+
+━━━━━━━━━━━━━━━━━━
+
+PIÈGE 4 — BOUCLE INFINIE
+
+Code :
+
+Algorithm Exemple4;
+
+Var
+    entier : x ;
+
+Begin
+
+    x <- 1 ;
+
+    While x < 10 do
+
+        Afficher(x) ;
+
+    Done ;
+
+End.
+
+Question :
+Pourquoi cette boucle ne s’arrête jamais ?
+
+━━━━━━━━━━━━━━━━━━
+
+Correction :
+
+La variable x n’est jamais modifiée.
+
+Il manque par exemple :
+
+x <- x + 1 ;
+
+dans la boucle.
+
+
+===========================================================================
+===========================================================================
+                    SLIDE 25 - PIÈGES CLASSIQUES : TABLEAUX
+===========================================================================
+===========================================================================
+
+Titre :
+Pièges classiques — Tableaux
+
+Sous-titre discret :
+Éviter les erreurs fréquentes lors des parcours et manipulations de tableaux.
+
+━━━━━━━━━━━━━━━━━━
+
+PIÈGE 1 — DÉPASSEMENT D’INDICE
+
+Code :
+
+Algorithm Exemple1;
+
+Var
+    entier : i ;
+    T : Array[5] of Integer ;
+
+Begin
+
+    For i <- 0 to 5 do
+
+        Lire(T[i]) ;
+
+    EndFor ;
+
+End.
+
+Question :
+Pourquoi ce programme peut provoquer une erreur ?
+
+━━━━━━━━━━━━━━━━━━
+
+Correction :
+
+Le tableau possède :
+- 5 cases
+- indices de 0 à 4
+
+La boucle essaye d’accéder à :
+T[5]
+
+Il faut écrire :
+
+For i <- 0 to 4 do
+
+ou :
+
+For i <- 0 to N-1 do
+
+━━━━━━━━━━━━━━━━━━
+
+PIÈGE 2 — CONFUSION ENTRE INDICE ET VALEUR
+
+Code :
+
+Algorithm Exemple2;
+
+Var
+    entier : i ;
+    T : Array[5] of Integer ;
+
+Begin
+
+    For i <- 0 to 4 do
+
+        If i MOD 2 = 0 Then
+
+            Afficher(T[i]) ;
+
+        Endif ;
+
+    EndFor ;
+
+End.
+
+Question :
+Que teste réellement cette condition ?
+
+━━━━━━━━━━━━━━━━━━
+
+Correction :
+
+La condition teste :
+- l’indice i
+
+et non :
+- la valeur T[i]
+
+Pour tester les valeurs paires :
+
+If T[i] MOD 2 = 0 Then
+
+━━━━━━━━━━━━━━━━━━
+
+PIÈGE 3 — ÉCHANGE INCORRECT
+
+Code :
+
+temp <- T[i] ;
+
+T[i] <- T[j] ;
+
+T[j] <- T[i] ;
+
+Question :
+Pourquoi l’échange ne fonctionne pas ?
+
+━━━━━━━━━━━━━━━━━━
+
+Correction :
+
+Après :
+
+T[i] <- T[j]
+
+la valeur initiale de T[i] est perdue.
+
+Il faut écrire :
+
+temp <- T[i] ;
+
+T[i] <- T[j] ;
+
+T[j] <- temp ;
+
+━━━━━━━━━━━━━━━━━━
+
+PIÈGE 4 — OUBLI D’INITIALISATION DU MAXIMUM
+
+Code :
+
+Algorithm Exemple4;
+
+Var
+    entier : i, max ;
+    T : Array[5] of Integer ;
+
+Begin
+
+    For i <- 0 to 4 do
+
+        If T[i] > max Then
+
+            max <- T[i] ;
+
+        Endif ;
+
+    EndFor ;
+
+End.
+
+Question :
+Pourquoi ce programme peut produire un résultat faux ?
+
+━━━━━━━━━━━━━━━━━━
+
+Correction :
+
+La variable max n’a jamais été initialisée.
+
+Il faut écrire :
+
+max <- T[0] ;
+
+avant la boucle.
+
+
+===========================================================================
+===========================================================================
+                    SLIDE 26 - PIÈGES CLASSIQUES : MATRICES
+===========================================================================
+===========================================================================
+
+Titre :
+Pièges classiques — Matrices
+
+Sous-titre discret :
+Éviter les erreurs fréquentes lors des parcours matriciels.
+
+━━━━━━━━━━━━━━━━━━
+
+PIÈGE 1 — CONFUSION ENTRE LIGNES ET COLONNES
+
+Code :
+
+For i <- 0 to N-1 do
+
+    For j <- 0 to P-1 do
+
+        Afficher(M[j][i]) ;
+
+    EndFor ;
+
+EndFor ;
+
+Question :
+Pourquoi ce code peut afficher des valeurs incorrectes ?
+
+━━━━━━━━━━━━━━━━━━
+
+Correction :
+
+Les indices ont été inversés.
+
+La lecture normale d’une matrice est :
+
+M[i][j]
+
+avec :
+- i → lignes
+- j → colonnes
+
+━━━━━━━━━━━━━━━━━━
+
+PIÈGE 2 — MAUVAISES BORNES DE BOUCLES
+
+Code :
+
+For i <- 0 to N do
+
+    For j <- 0 to P do
+
+        Lire(M[i][j]) ;
+
+    EndFor ;
+
+EndFor ;
+
+Question :
+Pourquoi ce parcours peut provoquer une erreur ?
+
+━━━━━━━━━━━━━━━━━━
+
+Correction :
+
+Les indices vont :
+- de 0 à N-1
+- de 0 à P-1
+
+Les bornes correctes sont :
+
+For i <- 0 to N-1 do
+
+    For j <- 0 to P-1 do
+
+━━━━━━━━━━━━━━━━━━
+
+PIÈGE 3 — ERREUR SUR LA DIAGONALE SECONDAIRE
+
+Code :
+
+If i + j = N Then
+
+    Afficher(M[i][j]) ;
+
+Endif ;
+
+Question :
+Pourquoi cette condition est incorrecte ?
+
+━━━━━━━━━━━━━━━━━━
+
+Correction :
+
+Pour une matrice de taille N :
+
+La diagonale secondaire vérifie :
+
+i + j = N - 1
+
+et non :
+i + j = N
+
+━━━━━━━━━━━━━━━━━━
+
+PIÈGE 4 — OUBLI DE RÉINITIALISATION
+
+Code :
+
+somme <- 0 ;
+
+For j <- 0 to P-1 do
+
+    For i <- 0 to N-1 do
+
+        somme <- somme + M[i][j] ;
+
+    EndFor ;
+
+    Afficher(somme) ;
+
+EndFor ;
+
+Question :
+Pourquoi les sommes deviennent incorrectes ?
+
+━━━━━━━━━━━━━━━━━━
+
+Correction :
+
+La variable somme n’est jamais réinitialisée pour chaque colonne.
+
+Il faut écrire :
+
+For j <- 0 to P-1 do
+
+    somme <- 0 ;
+
+avant la boucle intérieure.
+
+
+
+===========================================================================
+===========================================================================
+                    SLIDE 27 - PIÈGES CLASSIQUES : FONCTIONS & PROCÉDURES
+===========================================================================
+===========================================================================
+
+Titre :
+Pièges classiques — Fonctions & Procédures
+
+Sous-titre discret :
+Comprendre les erreurs fréquentes lors du découpage d’un algorithme.
+
+━━━━━━━━━━━━━━━━━━
+
+PIÈGE 1 — OUBLI DU RETURN
+
+Code :
+
+Function Somme(I a : entier, I b : entier) : entier ;
+
+Var
+    entier : s ;
+
+Begin
+
+    s <- a + b ;
+
+End ;
+
+Question :
+Pourquoi cette fonction est incorrecte ?
+
+━━━━━━━━━━━━━━━━━━
+
+Correction :
+
+Une fonction doit obligatoirement retourner une valeur.
+
+Il manque :
+
+Return s ;
+
+━━━━━━━━━━━━━━━━━━
+
+PIÈGE 2 — CONFUSION ENTRE FONCTION ET PROCÉDURE
+
+Code :
+
+Procedure Maximum(I a : entier, I b : entier) ;
+
+Begin
+
+    If a > b Then
+
+        Return a ;
+
+    Else
+
+        Return b ;
+
+    Endif ;
+
+End ;
+
+Question :
+Pourquoi ce code est incorrect ?
+
+━━━━━━━━━━━━━━━━━━
+
+Correction :
+
+Une procédure ne retourne pas de valeur.
+
+Il faut :
+- soit utiliser une fonction
+- soit modifier une variable avec IO
+
+━━━━━━━━━━━━━━━━━━
+
+PIÈGE 3 — PARAMÈTRE NON MODIFIÉ
+
+Code :
+
+Procedure Ajouter1(I x : entier) ;
+
+Begin
+
+    x <- x + 1 ;
+
+End ;
+
+━━━━━━━━━━━━━━━━━━
+
+Programme principal :
+
+a <- 5 ;
+
+Ajouter1(a) ;
+
+Afficher(a) ;
+
+Question :
+Pourquoi a reste égal à 5 ?
+
+━━━━━━━━━━━━━━━━━━
+
+Correction :
+
+Le paramètre est déclaré avec :
+I → entrée uniquement
+
+La variable originale n’est donc pas modifiée.
+
+Il faut utiliser :
+
+IO x : entier
+
+━━━━━━━━━━━━━━━━━━
+
+PIÈGE 4 — VARIABLE LOCALE CONFONDUE AVEC VARIABLE PRINCIPALE
+
+Code :
+
+Function Double(I x : entier) : entier ;
+
+Var
+    entier : y ;
+
+Begin
+
+    y <- x * 2 ;
+
+    Return y ;
+
+End ;
+
+━━━━━━━━━━━━━━━━━━
+
+Programme principal :
+
+Afficher(y) ;
+
+Question :
+Pourquoi cette instruction est incorrecte ?
+
+━━━━━━━━━━━━━━━━━━
+
+Correction :
+
+La variable y existe uniquement à l’intérieur de la fonction.
+
+C’est une variable locale.
+
+Elle n’existe pas dans le programme principal.

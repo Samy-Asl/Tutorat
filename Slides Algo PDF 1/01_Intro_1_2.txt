@@ -1,0 +1,123 @@
+Structure idéale de la Slide 2
+Titre
+Organisation du tutorat
+
+Puis un sous-titre discret :
+
+Chaque thème sera travaillé en 4 étapes.
+
+Ensuite :
+
+Bloc principal visuel
+
+(4 rectangles horizontaux ou verticaux)
+
+Rectangle 1
+Exercices essentiels
+Exercices rapides
+Méthodes indispensables
+Réflexes de base
+
+Petit texte discret :
+
+Objectif : comprendre les mécanismes.
+
+Rectangle 2
+
+
+===========================================================================
+===========================================================================
+                                  SLIDE 1 
+===========================================================================
+===========================================================================
+
+
+Titre
+Tutorat d’Algorithmique — Maîtrise des bases
+
+L1 Math-Informatique
+
+Sous titre
+Comprendre un énoncé · Exploiter rapidement les indispensables du S1 · Réussir l’examen
+
+Tout en bas a droite
+Réalisé par Asselah Samy
+mail : samy.asselah@esst-sup.com
+
+Visuel :
+
+fond blanc
+vert / bleu clair
+blocs arrondis
+style aéré, propre, académique mais vivant
+
+
+
+===========================================================================
+===========================================================================
+                                  SLIDE 2
+===========================================================================
+===========================================================================
+
+
+
+Titre
+Organisation du tutorat
+
+Puis un sous-titre discret :
+
+Chaque thème sera travaillé en 4 étapes.
+
+Ensuite :
+
+Bloc principal visuel
+
+(4 rectangles horizontaux ou verticaux)
+
+Rectangle 1
+Exercices essentiels
+Exercices rapides
+Méthodes indispensables
+Réflexes de base
+
+Petit texte discret :
+
+Objectif : comprendre les mécanismes.
+
+Rectangle 2
+Analyse & Méthode
+Comment lire l’énoncé
+Quelle structure utiliser
+Erreurs fréquentes
+Méthode de résolution
+
+Petit texte :
+
+Objectif : apprendre à réfléchir.
+
+Rectangle 3
+Exercice type examen
+Niveau plus complet
+Mélange de notions
+Réflexion autonome
+
+Petit texte :
+
+Objectif : se rapprocher du niveau réel.
+
+Rectangle 4
+Correction détaillée
+Explication étape par étape
+Trace d’exécution
+Raisonnement logique
+Correction des pièges
+
+Petit texte :
+
+Objectif : comprendre la logique complète.
+
+En bas de la slide
+
+Une petite phrase simple :
+
+Le tutorat sera basé principalement sur la pratique et le raisonnement.
